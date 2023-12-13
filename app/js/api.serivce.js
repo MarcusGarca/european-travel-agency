@@ -1,5 +1,5 @@
 export async function getCityData(latitude, longitude) {
-  const apiUrl = `http://www.7timer.info/bin/api.pl?lon=${longitude}&lat=${latitude}&product=civillight&output=json`;
+  const apiUrl = `https://www.7timer.info/bin/api.pl?lon=${longitude}&lat=${latitude}&product=civillight&output=json`;
 
   try {
     const response = await fetch(apiUrl);
