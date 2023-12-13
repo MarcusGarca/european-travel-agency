@@ -8,9 +8,10 @@ export function ScaleCelciusForFahrenheit() {
 
     paragraphs.forEach(function (paragraph) {
       paragraph.innerHTML =
-        Math.floor(
-          (parseInt(paragraph.innerHTML.replace("ºC", "").trim()) * 9) / 5 + 32
-        ) + "ºF";
+        (
+          parseInt(paragraph.innerHTML.replace("ºC", "").trim()) * 1.8 +
+          32
+        ).toFixed(0) + "ºF";
     });
   });
 }
@@ -25,10 +26,10 @@ export function ScaleFahrenheitForCelcius() {
 
     paragraphs.forEach(function (paragraph) {
       paragraph.innerHTML =
-        Math.floor(
-          ((parseInt(paragraph.innerHTML.replace("ºF", "").trim()) - 32) * 5) /
-            9
-        ) + "ºC";
+        (
+          (parseInt(paragraph.innerHTML.replace("ºF", "").trim()) - 32) /
+          1.8
+        ).toFixed(0) + "ºC";
     });
   });
 }

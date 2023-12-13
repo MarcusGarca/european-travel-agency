@@ -160,17 +160,17 @@ window.getColorWeekDay = function (params) {
 
 window.changeFahrenheit = function () {
   const celciusDiv = document.getElementById("celcius-temperature");
-  celciusDiv.style.display = "flex";
+  celciusDiv.style.display = "none";
   const fahrenheitDiv = document.getElementById("fahrenheit-temperature");
-  fahrenheitDiv.style.display = "none";
+  fahrenheitDiv.style.display = "flex";
 
   ScaleCelciusForFahrenheit();
 };
 window.changeCelcius = function () {
   const celciusDiv = document.getElementById("celcius-temperature");
-  celciusDiv.style.display = "none";
+  celciusDiv.style.display = "flex";
   const fahrenheitDiv = document.getElementById("fahrenheit-temperature");
-  fahrenheitDiv.style.display = "flex";
+  fahrenheitDiv.style.display = "none";
 
   ScaleFahrenheitForCelcius();
 };
