@@ -1,0 +1,349 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: 'Oxygen', sans-serif;
+}
+
+body {
+    background-image: url("../images/euro-trip-bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+    color: #ffffff;
+    background: #3f51b5;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between
+}
+
+.menu h1 {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    margin: 5px;
+    border-radius: 7px;
+    color: #5e35a1;
+    font-style: italic;
+}
+
+.menu img {
+    height: 40px;
+    width: 40px;
+    margin: 0 10px;
+}
+
+.menu a {
+    padding: 5px;
+    margin: 0 7px;
+    color: #ffffff;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0 !important;
+    align-items: center;
+}
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 100%;
+}
+
+h1,
+h2,
+form {
+    margin: 10px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-airplane {
+    height: 450px;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-airplane img {
+    position: fixed;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    z-index: 1;
+}
+
+.container-city-weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    padding-top: 1.25rem;
+    background-color: #f7f7f7;
+    z-index: 2;
+}
+
+.container-city-weather h2 {
+    color: #7f00a6;
+}
+
+select {
+    appearance: none;
+    padding: 10px;
+    border-radius: 7px;
+    border: solid 0.5px #2b49cf;
+    cursor: pointer;
+    background: #e9e9e9 url('../images/airplane-icon.png') 95.5% 50% no-repeat;
+    background-image: 20px;
+}
+
+select:hover {
+    border: solid 0.5px #052de0;
+    transition: 0s;
+}
+
+
+.container-temperature {
+    display: flex;
+    text-align: center;
+    padding: 10px;
+}
+
+#fahrenheit-temperature,
+#celcius-temperature {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+#fahrenheit-temperature label,
+#celcius-temperature label {
+    margin-right: 5px;
+}
+
+#fahrenheit-temperature input,
+#celcius-temperature input {
+    border: none;
+    background-color: transparent;
+    color: #5b00a6;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#fahrenheit-temperature input:hover,
+#celcius-temperature input:hover {
+    color: #b019ce;
+}
+
+#fahrenheit-temperature {
+    display: none;
+}
+
+
+.city-weather {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.city-weather-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    width: 250px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+
+}
+
+.city-weather-day header {
+    width: 100%;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 1.5625rem;
+    text-align: center;
+    background-color: #faebd7;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.city-weather-day strong,
+.city-weather-day span {
+    padding: 10px;
+    font-weight: bold;
+}
+
+.city-weather-day span {
+    display: flex;
+}
+
+.city-weather-day p {
+    margin-left: 5px;
+}
+
+/*Carousel*/
+#carouselExampleCaptions {
+    margin: 20px 0;
+}
+
+.carousel-item img {
+    height: 70vh;
+    object-fit: contain;
+    object-position: center;
+}
+
+.carousel-caption {
+    font-weight: 900;
+    background-color: #ffffff7e;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+    color: #2b2b2b;
+    font-weight: 900;
+}
+
+/*Style Spinner*/
+.container-spinner {
+    display: none;
+    position: relative;
+    margin: 10px;
+    width: 80px;
+    height: 80px;
+}
+
+.container-spinner div {
+    position: absolute;
+    border: 4px solid #483D8B;
+    opacity: 1;
+    border-radius: 50%;
+    animation: spinner 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.container-spinner div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background-color: #5b00a6;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.copyright-text p {
+    color: #ffffff;
+    margin: 0;
+    padding: 5px;
+}
+
+.api {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px;
+}
+
+.api img {
+    width: 35px;
+    height: 35px;
+}
+
+
+@keyframes spinner {
+    0% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    4.9% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    5% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+
+    100% {
+        top: 0px;
+        left: 0px;
+        width: 72px;
+        height: 72px;
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .carousel-item img {
+        height: 30vh;
+    }
+}
+
+@media screen and (min-width:426px) and (max-width:768px) {
+    .carousel-item img {
+        height: 50vh;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+    .carousel-item img {
+        height: 60vh;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .menu a {
+        font-size: 10px;
+        margin: 5px;
+    }
+}
